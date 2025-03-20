@@ -76,8 +76,8 @@
 
   <title>NewsNow</title>
   <style>
-    .dark body {
-    background: #1c2127 !important;
+.dark body {
+    background: #1c2127;
 }
 
 .dark .dark\:bg-green,
@@ -85,19 +85,73 @@
 .dark .dark\:bg-blue,
 .dark .dark\:bg-gray,
 .dark .dark\:bg-orange {
-    background: linear-gradient(160deg, #000000 20%, #20272f 29%, #000000 39%, #2a333b 69%, #010202 98%) !important;
+    background: linear-gradient(160deg, #000000 20%, #20272f 29%, #000000 39%, #2a333b 69%, #010202 98%);
 }
 
-.text-neutral-500 a,
-.text-neutral-500 span,
-.text-primary-600,
-.dark .dark\:text-primary {
-    display: none !important;
+.dark .bg-base {
+    --un-bg-opacity: 1;
+    background: linear-gradient(160deg, #13181c 20%, #20272f 29%, #13181c 39%, #2a333b 69%, #1d242d 98%);
 }
 
-@media (min-width: 1024px) {
-    .lg\:py-6 .justify-self-start {
-    display: none !important;
+span.mr-2.text-base:hover {
+    color: #ff6000;
+}
+
+.transition-shadow-500 {
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .5s;
+    font-size: 17px;
+}
+
+.color-primary {
+    color: #ff6900;
+}
+
+.justify-self-start,
+.dark .dark\:text-primary,
+.text-neutral-500 {
+    visibility: hidden;
+}
+
+@media (max-width: 395px) {
+    .transition-opacity-300 {
+        width: 92%; 
+        margin: 0 auto; 
+    }
+}
+
+@media (max-width: 365px) {
+    .transition-opacity-300 {
+        width: 88%; 
+    }
+}
+
+@media (max-width: 345px) {
+    .transition-opacity-300 {
+        width: 82%; 
+    }
+}
+
+/* 设置滚动条的总宽度 */
+html::-webkit-scrollbar, 
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar {
+	   width: 5px !important;
+    background-color: transparent; /* 滚动条背景色 */
+}
+
+/* 设置滑块默认样式 */
+html::-webkit-scrollbar-thumb, 
+pre code.hljs::-webkit-scrollbar-thumb, 
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar-thumb {
+    background-color: #535c66; /* 滑块默认颜色 */
+    border-radius: 9px; /* 滑块圆角样式 */
+}
+
+/* 滑块悬停时的样式 */
+html::-webkit-scrollbar-thumb:hover, 
+.sidebar-menu.fixed .sidebar-menu-inner::-webkit-scrollbar-thumb:hover {
+    background-color: #ff6900; /* 滑块悬停颜色 */
 }
   </style>
 </head>
