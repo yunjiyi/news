@@ -84,7 +84,8 @@
 .dark .dark\:bg-red,
 .dark .dark\:bg-blue,
 .dark .dark\:bg-gray,
-.dark .dark\:bg-orange {
+.dark .dark\:bg-orange,
+.dark .dark\:bg-emerald {
     background: linear-gradient(160deg, #000000 20%, #20272f 29%, #000000 39%, #2a333b 69%, #010202 98%);
 }
 
@@ -107,6 +108,9 @@ span.mr-2.text-base:hover {
     border-color: #ff9600 !important;
 }
 
+.shadow-primary\/20 {
+    --un-shadow-color: none !important;
+}
 
 .color-primary {
     color: #ff6900 !important;
@@ -124,12 +128,14 @@ span.mr-2.text-base:hover {
     }
 }
 
+/* 设置滚动条的总宽度 */
 .os-scrollbar-vertical .os-scrollbar-handle {
 	   width: 5px !important;
 }
 
+/* 滑块悬停时的样式 */
 .os-scrollbar-vertical .os-scrollbar-handle:hover {
-    background-color: #ff6900 !important;
+    background-color: #ff6900; /* 滑块悬停颜色 */
 }
   </style>
 </head>
