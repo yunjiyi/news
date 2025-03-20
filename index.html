@@ -50,31 +50,34 @@
     gtag('config', 'G-EL9HHYE5LC');
   </script>
 -->
-  <script>
+<script>
     function safeParseString(str) {
-      try {
-        return JSON.parse(str)
-      } catch {
-        return ""
-      }
+        try {
+            return JSON.parse(str);
+        } catch {
+            return "";
+        }
     }
-    const theme = safeParseString(localStorage.getItem("color-scheme")) || "dark"
-    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    if (theme !== "light") {
-      document.documentElement.classList.add("dark")
+    
+    // 默认优先设置为暗黑模式
+    const theme = safeParseString(localStorage.getItem("color-scheme")) || "dark";
+    if (theme === "dark" || theme === "") {
+        // 如果本地存储没有主题或者主题为暗黑模式，则添加暗黑类
+        document.documentElement.classList.add("dark");
     }
 
-    const query = new URLSearchParams(window.location.search)
+    const query = new URLSearchParams(window.location.search);
     if (query.has("login") && query.has("user") && query.has("jwt")) {
-      localStorage.setItem("user", query.get("user"))
-      localStorage.setItem("jwt", JSON.stringify(query.get("jwt")))
-      window.history.replaceState({}, document.title, window.location.pathname)
+        localStorage.setItem("user", query.get("user"));
+        localStorage.setItem("jwt", JSON.stringify(query.get("jwt")));
+        window.history.replaceState({}, document.title, window.location.pathname);
     }
-  </script>
+</script>
+
   <title>NewsNow</title>
   <style>
     .dark body {
-    background: #1c2127;
+    background: #1c2127 !important;
 }
 
 .dark .dark\:bg-green,
@@ -82,7 +85,7 @@
 .dark .dark\:bg-blue,
 .dark .dark\:bg-gray,
 .dark .dark\:bg-orange {
-    background: linear-gradient(160deg, #000000 20%, #20272f 29%, #000000 39%, #2a333b 69%, #010202 98%);
+    background: linear-gradient(160deg, #000000 20%, #20272f 29%, #000000 39%, #2a333b 69%, #010202 98%) !important;
 }
 
 span.flex.justify-self-start,
@@ -90,12 +93,12 @@ span.flex.justify-self-start,
 .text-neutral-500 span,
 .text-primary-600,
 .dark .dark\:text-primary {
-    display: none;
+    display: none !important;
 }
 
 @media (min-width: 1024px) {
     .lg\:py-6 .justify-self-start {
-    display: none;
+    display: none !important;
 }
   </style>
 </head>
