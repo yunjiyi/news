@@ -3,30 +3,30 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+  <!--<link rel="icon" type="image/svg+xml" href="/icon.svg" />-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- SEO Meta Tags -->
   <meta name="description" content="NewsNow - 实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验" />
-  <meta name="keywords" content="新闻,科技新闻,实时新闻,新闻聚合,NewsNow" />
-  <meta name="author" content="NewsNow" />
+  <meta name="keywords" content="新闻,科技新闻,实时新闻,新闻聚合" />
+ <!--<meta name="author" content="NewsNow" />-->
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="NewsNow - 优雅的新闻聚合阅读器" />
   <meta property="og:description" content="实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://newsnow.busiyi.world" />
-  <meta property="og:image" content="https://newsnow.busiyi.world/og-image.png" />
+  <!--<meta property="og:url" content="https://newsnow.busiyi.world" />-->
+  <!--<meta property="og:image" content="https://newsnow.busiyi.world/og-image.png" />-->
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NewsNow - 优雅的新闻聚合阅读器" />
   <meta name="twitter:description" content="实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验" />
-  <meta name="twitter:image" content="https://newsnow.busiyi.world/og-image.svg" />
+  <!--<meta name="twitter:image" content="https://newsnow.busiyi.world/og-image.svg" />-->
 
   <meta name="theme-color" content="#F14D42" />
   <link rel="preload" href="/Baloo2-Bold.subset.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />-->
 
   <!-- Schema.org markup for Google -->
   <!--
@@ -76,7 +76,8 @@
 
   <title>NewsNow</title>
   <style>
-[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
+[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]),
+.dark body {
     background: #1c2127 !important;
 }
 
@@ -95,6 +96,15 @@
 
 .dark .bg-base {
     background: linear-gradient(160deg, #12171a 20%, #20272f 29%, #0c1012 39%, #212931 69%, #000000 98%) !important;
+}
+
+.color-blue,
+.color-green,
+.color-red,
+.color-gray,
+.color-orange,
+.color-emerald {
+    color: #ffffff !important;
 }
 
 span.mr-2.text-base:hover,
@@ -129,9 +139,10 @@ span.mr-2.text-base:hover,
     visibility: hidden;
 }
 
-@media (max-width: 395px) {
-    .transition-opacity-300 {
-        width: 92%; 
+@media screen and (max-width: 767px) {
+    .main-content.page {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
