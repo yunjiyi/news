@@ -77,20 +77,14 @@
   <title>NewsNow</title>
   <style>
 [data-overlayscrollbars-viewport]:not([data-overlayscrollbars]),
-.dark body {
+.dark body,
+.px-4 {
     background: #1c2127 !important;
 }
 
-.dark .dark\:bg-green,
-.dark .dark\:bg-red,
-.dark .dark\:bg-blue,
-.dark .dark\:bg-gray,
-.dark .dark\:bg-orange,
-.dark .dark\:bg-emerald,
+.transition-opacity-300,
 .dark [cmdk-dialog],
-[cmdk-dialog],
-.dark .dark\:bg-slate,
-.dark .dark\:bg-teal {
+[cmdk-dialog] {
     background: linear-gradient(160deg, #000000 20%, #20272f 29%, #000000 39%, #2a333b 69%, #010202 98%) !important;
 }
 
@@ -98,20 +92,28 @@
     background: linear-gradient(160deg, #12171a 20%, #20272f 29%, #0c1012 39%, #212931 69%, #000000 98%) !important;
 }
 
-.color-blue,
-.color-green,
-.color-red,
-.color-gray,
-.color-orange,
-.color-emerald {
+.text-lg {
+    font-size: 1.525rem;
     color: #ffffff !important;
+    background: transparent !important;
+}
+.op-80 {
+    opacity: .8;
+    color: #fff !important;
+}
+
+@media (max-width: 400px) {
+  .transition-opacity-300 {
+    width: 92%;
+  }
 }
 
 span.mr-2.text-base:hover,
 .rounded-md:hover,
 .text-base:hover,
 .px-1:hover {
-    color: #ff6000 !important;
+    color: #ffffff !important;
+    background-color: #ff9600 !important;
 }
 
 .transition-shadow-500 {
@@ -146,14 +148,12 @@ span.mr-2.text-base:hover,
     }
 }
 
-/* 设置滚动条的总宽度 */
 .os-scrollbar-vertical .os-scrollbar-handle {
 	   width: 5px !important;
 }
 
-/* 滑块悬停时的样式 */
 .os-scrollbar-vertical .os-scrollbar-handle:hover {
-    background-color: #ff6900; /* 滑块悬停颜色 */
+    background-color: #ff6900;
 }
   </style>
 </head>
